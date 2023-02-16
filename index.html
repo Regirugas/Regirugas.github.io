@@ -1,12 +1,1180 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Result</title>
-	</head>
-	<body><h1>YEAH SANDWICHES</h1>
-	<img src="http://bit.ly/RhrMEn" />
-		<p>I like eggs.</p>
-		<p>And ham!</p>
-		<p>But mostly sandwiches.</p>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title>BIGHEAD 산업도시 - 분류저장소</title>
+        <script src="/js/itemcodes.js"></script>
+        <script src="/js/classcodes.js"></script>
+        <script defer src="/js/index.js"></script>
+        <script defer src="/js/class.js"></script>
+        
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/class.css">
+        <link rel="stylesheet" href="/css/icons.css">
+    </head>
+    <body>
+        <nav>
+            <a id="title" href="/">BIGHEAD 산업도시</a>
+            <ul>
+                <li><a href="/map">MAP</a></li><li><a href="/gulag">GULAG</a></li><li class="active"><a href="/class">분류저장소</a></li>
+            </ul>
+            <div>
+                <a id="user" onclick="loginBtn()"><i class="fa-solid fa-user"></i><span>로그인</span></a>
+                <a id="emergency" onclick="emergencyOpen()"><i class="fa-solid fa-light-emergency"></i>긴급호출</a>
+            </div>
+        </nav>
+        <div id="classmain">
+            <div id="classfloorbtn">
+                <a data-floor="B1">B1</a>
+                <a data-floor="1" class="active">1F</a>
+                <input type="text" id="classsearch" placeholder="검색하기" onkeyup="findchest(this.value)"/>
+                <a data-floor="2">2F</a>
+            </div>
+            <div class="classfloor" data-floor="B1">
+                 <div class="classgroup" data-group="A">
+                     <div class="classarea" data-area="A1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A2" style="margin-right: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="B">
+                     <div class="classarea" data-area="B1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B5">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B6">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B7">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B8">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B9">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B10">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="C">
+                     <div class="classarea" data-area="C1" style="margin-bottom: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="C2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="D">
+                     <div class="classarea" data-area="D1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D5">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D6">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D7">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D8">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D9">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D10">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="E">
+                     <div class="classarea" data-area="E1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="E2" style="margin-left: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="E4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="E3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="F">
+                     <div class="classarea" data-area="F1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F5">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F6">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F7">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F8">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F9">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="F10">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="G">
+                     <div class="classarea" data-area="G1" style="margin-top: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="G2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="H">
+                     <div class="classarea" data-area="H1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H2">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H5">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H6">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H7">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H8">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H9">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="H10">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+             </div>
+            <div class="classfloor active" data-floor="1">
+                <div class="classgroup" data-group="A">
+                    <div class="classarea" data-area="A1">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="A2" style="margin-right: 30px;">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="A4">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="A3">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                </div>
+                <div class="classgroup" data-group="B">
+                    <div class="classarea" data-area="B1">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="B2" style="margin-bottom: 30px;">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="B4">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="B3">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                </div>
+                <div class="classgroup" data-group="C">
+                    <div class="classarea" data-area="C1">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="C2" style="margin-left: 30px;">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="C4">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="C3">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                </div>
+                <div class="classgroup" data-group="D">
+                    <div class="classarea" data-area="D1">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="D2" style="margin-top: 30px;">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="D4">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                    <div class="classarea" data-area="D3">
+                        <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                        <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="classfloor" data-floor="2">
+                 <div class="classgroup" data-group="A">
+                     <div class="classarea" data-area="A1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A2" style="margin-right: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="A3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="B">
+                     <div class="classarea" data-area="B1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B2" style="margin-bottom: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="B3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="C">
+                     <div class="classarea" data-area="C1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="C2" style="margin-left: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="C4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="C3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+                 <div class="classgroup" data-group="D">
+                     <div class="classarea" data-area="D1">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D2" style="margin-top: 30px;">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D4">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                     <div class="classarea" data-area="D3">
+                         <div class="classnum" data-num="1"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="2"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="3"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="4"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="5"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="6"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="7"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="8"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="9"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="10"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="11"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="12"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="13"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="14"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="15"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="16"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="17"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="18"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="19"><img src="/img/items/air.png"></div>
+                         <div class="classnum" data-num="20"><img src="/img/items/air.png"></div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <div id="chestpopup" style="top: 190px; left: 150px;" ondragstart="chestpopupDragStart(event)" ondragend="chestpopupDragEnd(event)">
+            <div id="chestpopupTop" onmousedown="chestpopupDragTop()">
+                <p id="chestpopupTopTitle"></p>
+                <a id="chestpopupTopTp" onclick="tpBtn()"><i class="fa-solid fa-transporter"></i></a>
+                <a id="chestpopupTopCancel" onclick="chestpopupClose()"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <div id="gridscroll">
+            </div>
+        </div>
+        <div id="searchpopup">
+        </div>
+        <div id="time">
+            <p id="timetext1"></p>
+            <p id="timetime1"></p>
+            <p id="timetext2"></p>
+            <p id="timetime2"></p>
+            <div id="background" style="width:0%;"></div>
+        </div>
+        <p id="tooltip"></p>
+    </body>
 </html>
